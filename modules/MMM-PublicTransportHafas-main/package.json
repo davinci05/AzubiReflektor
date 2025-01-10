@@ -1,0 +1,64 @@
+{
+  "name": "mmm-publictransporthafas",
+  "version": "2.1.13",
+  "description": "Public transport module for MagicMirror² driven by hafas-client data.",
+  "keywords": [
+    "MagicMirror",
+    "public transport",
+    "hafas"
+  ],
+  "homepage": "https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas#readme",
+  "bugs": {
+    "url": "https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas.git"
+  },
+  "license": "MIT",
+  "author": "Kristjan ESPERANTO (https://github.com/KristjanESPERANTO)",
+  "contributors": [
+    "https://github.com/raywo/MMM-PublicTransportHafas/graphs/contributors",
+    "https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas/graphs/contributors"
+  ],
+  "main": "MMM-PublicTransportHafas.js",
+  "scripts": {
+    "lint": "eslint . && stylelint **/*.css && markdownlint . --ignore node_modules && prettier . --check",
+    "lint:fix": "eslint . --fix && stylelint **/*.css --fix && markdownlint . --ignore node_modules --fix && prettier . --write",
+    "prepare": "[ -f node_modules/.bin/husky ] && husky || echo husky is not installed.",
+    "query": "node ./convenience/query_stations.mjs",
+    "release": "npx bumpp --no-push",
+    "test": "npm run lint && npm run test:spelling",
+    "test:spelling": "cspell ."
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*": "prettier --ignore-unknown --write"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "hafas-client": "^6.3.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@eslint/json": "^0.9.0",
+    "@eslint/markdown": "^6.2.1",
+    "@stylistic/eslint-plugin": "^2.12.1",
+    "cspell": "^8.17.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-package-json": "^0.18.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "markdownlint-cli": "^0.43.0",
+    "prettier": "^3.4.2",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-prettier": "^5.0.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
