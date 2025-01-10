@@ -27,7 +27,7 @@ let config = {
 	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
 	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
 
-	language: "en",
+	language: "de",
 	locale: "en-US",   // this variable is provided as a consistent location
 			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
 			   // as we have no usage, we  have no constraints on what this field holds
@@ -47,18 +47,26 @@ let config = {
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				displaySeconds: false,
+				showWeek: true,
+				showSunTimes: true,
+				lat: 51.002178,
+				lon: 6.950610
+
+			}
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "International Holidays",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
-						symbol: "calendar-check",
-						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics"
+						symbol: "hand-point-right",
+						url: "https://ics.calendarlabs.com/56/e261b915/International_Holidays.ics"
 					}
 				]
 			}
