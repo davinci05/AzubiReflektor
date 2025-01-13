@@ -21,4 +21,5 @@ iframe.newsfeed-fullarticle {
 .newsfeed-list li {
   text-align: justify;
   margin-bottom: 0.5em;
+  font-size: 400px
 }

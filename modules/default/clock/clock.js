@@ -112,12 +112,12 @@ Module.register("clock", {
 		const weekWrapper = document.createElement("div");
 
 		// Style Wrappers
-		dateWrapper.className = "date normal medium";
+		dateWrapper.className = "date bright medium";
 		timeWrapper.className = "time bright large light";
 		secondsWrapper.className = "seconds dimmed";
-		sunWrapper.className = "sun dimmed small";
+		sunWrapper.className = "sun bright small";
 		moonWrapper.className = "moon dimmed small";
-		weekWrapper.className = "week dimmed medium";
+		weekWrapper.className = "week bright medium";
 
 		// Set content of wrappers.
 		// The moment().format("h") method has a bug on the Raspberry Pi.
@@ -180,9 +180,9 @@ Module.register("clock", {
 			const untilNextEvent = moment.duration(moment(nextEvent).diff(now));
 			const untilNextEventString = `${untilNextEvent.hours()}h ${untilNextEvent.minutes()}m`;
 			sunWrapper.innerHTML
-				= `<span class="${isVisible ? "bright" : ""}"><i class="fas fa-sun" aria-hidden="true"></i> ${untilNextEventString}</span>`
-				+ `<span><i class="fas fa-arrow-up" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunrise)}</span>`
-				+ `<span><i class="fas fa-arrow-down" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunset)}</span>`;
+				= `<span class="${isVisible ? "bright" : ""}"><i class="fa-regular fa-sun fa-beat" style="color: #FFD43B;"></i></i> ${untilNextEventString}</span>  `
+				+ `<span><i class="fas fa-arrow-up" aria-hidden="true" style="color: #ffa947;"></i> ${formatTime(this.config, sunTimes.sunrise)}</span>  `
+				+ `<span><i class="fas fa-arrow-down" aria-hidden="true" style="color: #57b6ff;"></i> ${formatTime(this.config, sunTimes.sunset)}</span>  `;
 			digitalWrapper.appendChild(sunWrapper);
 		}
 
@@ -214,7 +214,7 @@ Module.register("clock", {
 		}
 
 		if (this.config.showWeek) {
-			weekWrapper.innerHTML = this.translate("WEEK", { weekNumber: now.week() });
+			weekWrapper.innerHTML = this.translate("WEEK", {weekNumber: now.week()});
 			digitalWrapper.appendChild(weekWrapper);
 		}
 

@@ -32,6 +32,13 @@ let config = {
 			module: "updatenotification",
 			position: "top_bar"
 		},
+		{module: "clock",
+			position: "top_left",
+			config: {
+				displayType:"analog",
+				analogFace: "face-012",
+				analogSize: "900px"
+			}},
 		{
 			module: "clock",
 			position: "top_left",
@@ -41,7 +48,6 @@ let config = {
 				showSunTimes: true,
 				lat: 51.002178,
 				lon: 6.950610
-
 			}
 		},
 		{
@@ -85,13 +91,13 @@ let config = {
 		},
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			position: "middle_center",
 			config: {
 
 				feeds: [
 					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "WDR Rheinland",
+						url: "https://www1.wdr.de/nachrichten/rheinland/uebersicht-rheinland-100.feed"
 					}
 				],
 				showSourceTitle: true,
