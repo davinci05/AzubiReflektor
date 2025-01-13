@@ -180,7 +180,7 @@ Module.register("clock", {
 			const untilNextEvent = moment.duration(moment(nextEvent).diff(now));
 			const untilNextEventString = `${untilNextEvent.hours()}h ${untilNextEvent.minutes()}m`;
 			sunWrapper.innerHTML
-				= `<span class="${isVisible ? "bright" : ""}"><i class="fa-regular fa-sun"></i></i> ${untilNextEventString}</span>`
+				= `<span class="${isVisible ? "bright" : ""}"><i class="fa-regular fa-sun" style="color: #FFD43B;"></i></i> ${untilNextEventString}</span>`
 				+ `<span><i class="fas fa-arrow-up" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunrise)}</span>`
 				+ `<span><i class="fas fa-arrow-down" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunset)}</span>`;
 			digitalWrapper.appendChild(sunWrapper);
