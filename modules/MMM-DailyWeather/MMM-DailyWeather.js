@@ -4,8 +4,8 @@ Module.register("MMM-DailyWeather", {
         latitude: 50.9375,   // Breitengrad für Köln
         longitude: 6.9603,   // Längengrad für Köln
         units: "metric",    // "metric" für Celsius, "imperial" für Fahrenheit
-        days: 3,              // Anzahl der Tage, die angezeigt werden
-        fixedHeight: 140      // Erhöhte feste Höhe für bessere Darstellung und Vermeidung von Überlappungen
+        days: 3,            // Anzahl der Tage, die angezeigt werden
+        fixedHeight: "50vh" // Größe auf 50% des Bildschirms setzen
     },
 
     start: function () {
@@ -34,7 +34,7 @@ Module.register("MMM-DailyWeather", {
         const temperatureData = data.hourly.temperature_2m;
         const weatherCodeData = data.hourly.weathercode;
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < this.config.days; i++) {
             const date = new Date();
             date.setDate(date.getDate() + i);
             const formattedDate = date.toLocaleDateString("de-DE"); // Format: dd.mm.yyyy
@@ -42,9 +42,9 @@ Module.register("MMM-DailyWeather", {
             for (let j = 0; j < hourlyData.length; j++) {
                 if (hourlyData[j].includes(date.toISOString().split("T")[0]) && hourlyData[j].includes("15:00")) {
                     let dayLabel = "";
-                    if (i === 0) dayLabel = "<strong style='font-size:1.5em; margin-right: 10px;'>Heute</strong>";
-                    else if (i === 1) dayLabel = "<span style='margin-right: 10px;'>Morgen</span>";
-                    else dayLabel = `<span style='margin-right: 10px;'>${formattedDate}</span>`;
+                    if (i === 0) dayLabel = "<strong style='font-size:1.5em;'>Heute</strong>";
+                    else if (i === 1) dayLabel = "<span>Morgen</span>";
+                    else dayLabel = `<span>${formattedDate}</span>`;
                     
                     dailyWeather.push({
                         date: dayLabel,
@@ -62,14 +62,14 @@ Module.register("MMM-DailyWeather", {
         const icons = {
             0: "☀️", // Klarer Himmel
             1: "🌤️", // Leicht bewölkt
-            2: "⛅", // Teilweise bewölkt
-            3: "☁️", // Bewölkt
+            2: "⛅",  // Teilweise bewölkt
+            3: "☁️",  // Bewölkt
             45: "🌫️", // Nebel
             48: "🌫️", // Gefrierender Nebel
             51: "🌦️", // Leichter Nieselregen
             61: "🌧️", // Leichter Regen
             80: "🌦️", // Vereinzelte Schauer
-            95: "⛈️" // Gewitter
+            95: "⛈️"  // Gewitter
         };
         return icons[weatherCode] || "❓"; // Standard-Icon falls kein Wettercode erkannt wird
     },
@@ -77,23 +77,41 @@ Module.register("MMM-DailyWeather", {
     getDom: function () {
         const wrapper = document.createElement("div");
         wrapper.className = "small";
-        wrapper.style.height = this.config.fixedHeight + "px";
+        wrapper.style.width = "50vw"; // Breite auf 50% des Bildschirms
+        wrapper.style.height = "50vh"; // Höhe auf 50% des Bildschirms
         wrapper.style.overflow = "hidden";
         wrapper.style.display = "flex";
-        wrapper.style.flexDirection = "row";
-        wrapper.style.justifyContent = "space-around";
+        wrapper.style.flexDirection = "column"; // Überschrift + Wetter untereinander
+        wrapper.style.justifyContent = "center";
         wrapper.style.alignItems = "center";
         wrapper.style.marginBottom = "15px";
         wrapper.style.maxWidth = "100%";
         wrapper.style.position = "fixed";
         wrapper.style.top = "10px";
-        wrapper.style.right = "10px";
+        wrapper.style.left = "25vw"; // Zentrierung (25% links + 50% Breite = Mitte)
         wrapper.style.zIndex = "100";
+        wrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)"; // Leichter Hintergrund
+        wrapper.style.borderRadius = "10px";
+        wrapper.style.padding = "20px";
+        wrapper.style.color = "white"; // Weißer Text für besseren Kontrast
+
+        // 🎉 Überschrift hinzufügen
+        const title = document.createElement("div");
+        title.innerHTML = "<h2 style='font-size:2em; margin-bottom: 20px;'>Feierabend Wetter</h2>";
+        wrapper.appendChild(title);
 
         if (!this.weatherData) {
-            wrapper.innerHTML = "Lade Wetterdaten...";
+            const loading = document.createElement("div");
+            loading.innerHTML = "Lade Wetterdaten...";
+            loading.style.fontSize = "1.5em";
+            wrapper.appendChild(loading);
             return wrapper;
         }
+
+        const weatherContainer = document.createElement("div");
+        weatherContainer.style.display = "flex";
+        weatherContainer.style.justifyContent = "space-around";
+        weatherContainer.style.width = "100%";
 
         this.weatherData.forEach((day, index) => {
             const dayContainer = document.createElement("div");
@@ -115,8 +133,10 @@ Module.register("MMM-DailyWeather", {
             dayContainer.appendChild(dayLabel);
             dayContainer.appendChild(icon);
             dayContainer.appendChild(temp);
-            wrapper.appendChild(dayContainer);
+            weatherContainer.appendChild(dayContainer);
         });
+
+        wrapper.appendChild(weatherContainer);
 
         return wrapper;
     }
