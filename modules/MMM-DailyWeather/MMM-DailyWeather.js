@@ -7,7 +7,7 @@ Module.register("MMM-DailyWeather", {
         days: 3,              // Anzahl der Tage, die angezeigt werden
         fixedHeight: 600,     // Erhöhte feste Höhe für bessere Darstellung und Vermeidung von Überlappungen
 		headerText: "Feierabendwetter",
-		headerStyle: "font-size: 13em; font-weight: bold; margin-bottom: 10px;"
+		headerStyle: "font-size: 13em; color: white; font-weight: bold; margin-bottom: 10px;"
     },
 
     start: function () {
