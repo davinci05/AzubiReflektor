@@ -14,7 +14,7 @@ Module.register("MMM-PublicTransportHafas", {
     name: "MMM-PublicTransportHafas",
     hafasProfile: "kvb",                 // Which HAFAS profile should be used?
     hidden: false,
-    updatesEvery: 120,                  // How often should the table be updated in s?
+    updatesEvery: 60,                  // How often should the table be updated in s?
     timeFormat: config.timeFormat,      // Since we don't use moment.js, we need to handle the time format ourselves. This is the default time format of the mirror.
 
     // Header
@@ -30,8 +30,8 @@ Module.register("MMM-PublicTransportHafas", {
     ignoredLines: [],                   // Which lines should be ignored? (comma-separated list of line names)
     ignoreRelatedStations: false,       // For some stations there are related stations. By default, their departures are also displayed.
     excludedTransportationTypes: [],    // Which transportation types should not be shown on the mirror? (comma-separated list of types) possible values: "tram", "bus", "suburban", "subway", "regional" and "national"
-    timeToStation: 10,                  // How long do you need to walk to the Station? (in minutes)
-    timeInFuture: 40,                   // Show departures for the next *timeInFuture* minutes.
+    timeToStation: 7,                  // How long do you need to walk to the Station? (in minutes)
+    timeInFuture: 120,                   // Show departures for the next *timeInFuture* minutes.
 
     // Look and Feel
     marqueeLongDirections: true,        // Use Marquee effect for long station names?
