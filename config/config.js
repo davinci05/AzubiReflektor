@@ -104,12 +104,12 @@ let config = {
 		},
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			position: "middle_center",
 			config: {
 
 				feeds: [
 					{
-						title: "New York Times",
+						title: "WDR Rheinland",
 						url: "https://www1.wdr.de/nachrichten/rheinland/uebersicht-rheinland-100.feed"
 					}
 				],
