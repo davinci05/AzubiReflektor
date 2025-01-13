@@ -135,11 +135,11 @@ them from the MagicMirror² core system and other modules.
 .mmm-pth-sign {
   background-color: #333;
   color: white;
-  min-width: 2.5ch;
-  font-size: 0.9em;
+  min-width: 5ch;
+  font-size: 3em;
   font-weight: bold;
-  margin: 0.1rem auto;
-  padding: 0.2rem;
+  margin: 0.2rem auto;
+  padding: 0.4rem;
   position: relative;
   text-align: center;
   width: max-content;
