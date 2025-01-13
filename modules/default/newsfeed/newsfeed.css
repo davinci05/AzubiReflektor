@@ -13,7 +13,7 @@ iframe.newsfeed-fullarticle {
   bottom: inherit;
   top: -90px;
 }
-.newsfeed .small{
+.newsfeed .medium{
   font-size: 200px;
   line-height: 200px;
 }
