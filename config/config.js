@@ -70,7 +70,7 @@ let config = {
 		},
 		{
 			module: "MMM-DailyWeather",
-			position: "top_right",
+			position: "bottom_right",
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
@@ -83,7 +83,7 @@ let config = {
 
 		{
 			module: "newsfeed",
-			position: "middle_center",
+			position: "bottom_bar",
 			config: {
 
 				feeds: [
