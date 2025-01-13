@@ -182,7 +182,7 @@ Module.register("clock", {
 			sunWrapper.innerHTML
 				= `<span class="${isVisible ? "bright" : ""}"><i class="fa-regular fa-sun fa-beat" style="color: #FFD43B;"></i></i> ${untilNextEventString}</span>  `
 				+ `<span><i class="fas fa-arrow-up" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunrise)}</span>  `
-				+ `<span><i class="fas fa-arrow-down" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunset)}</span>  `;
+				+ `<span><i class="fas fa-arrow-down" aria-hidden="true" style="color: #FFD43B;"></i> ${formatTime(this.config, sunTimes.sunset)}</span>  `;
 			digitalWrapper.appendChild(sunWrapper);
 		}
 
@@ -214,7 +214,7 @@ Module.register("clock", {
 		}
 
 		if (this.config.showWeek) {
-			weekWrapper.innerHTML = this.translate("WEEK", { weekNumber: now.week() });
+			weekWrapper.innerHTML = this.translate("WEEK", {weekNumber: now.week()});
 			digitalWrapper.appendChild(weekWrapper);
 		}
 
