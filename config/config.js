@@ -54,7 +54,9 @@ let config = {
 				showSunTimes: true,
 				lat: 51.002178,
 				lon: 6.950610,
-				fontSize: 700
+				displayType: "analog",
+				analogSize: "500px",
+				analogFace: "face-008"
 
 			}
 		},
