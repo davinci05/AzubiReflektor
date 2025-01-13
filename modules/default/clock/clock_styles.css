@@ -91,7 +91,9 @@
 .digital .date {
   font-size: 1px; /* Ändere den Wert nach Bedarf */
 }
-
+.digital. week{
+  font-size: 30px
+}
 .module.clock .sun{
   font-size: 60px
 }
