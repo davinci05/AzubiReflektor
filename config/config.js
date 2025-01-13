@@ -53,7 +53,10 @@ let config = {
 				showWeek: true,
 				showSunTimes: true,
 				lat: 51.002178,
-				lon: 6.950610
+				lon: 6.950610,
+				displayType: "analog",
+				analogSize: "300px",
+				analogFace: "face-008"
 
 			}
 		},
