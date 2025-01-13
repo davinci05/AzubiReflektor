@@ -76,7 +76,8 @@ let config = {
 				type: "current",
 				lat: 40.776676,
 				lon: -73.971321,
-				headerText: "Feierabendwetter!"
+				headerText: "Feierabendwetter!",
+				headerStyle: "font-size: 13em; color: white; font-weight: bold; margin-bottom: 10px;"
 			}
 		},
 
