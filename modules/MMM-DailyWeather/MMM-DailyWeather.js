@@ -5,7 +5,9 @@ Module.register("MMM-DailyWeather", {
         longitude: 6.9603,   // Längengrad für Köln
         units: "metric",    // "metric" für Celsius, "imperial" für Fahrenheit
         days: 3,              // Anzahl der Tage, die angezeigt werden
-        fixedHeight: 140      // Erhöhte feste Höhe für bessere Darstellung und Vermeidung von Überlappungen
+        fixedHeight: 600,     // Erhöhte feste Höhe für bessere Darstellung und Vermeidung von Überlappungen
+		headerText: "Feierabendwetter",
+		headerStyle: "font-size: 13em; font-weight: bold; margin-bottom: 10px;"
     },
 
     start: function () {
@@ -18,7 +20,7 @@ Module.register("MMM-DailyWeather", {
 
     getWeather: function () {
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${this.config.latitude}&longitude=${this.config.longitude}&hourly=temperature_2m,weathercode&timezone=auto`;
-        
+
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -45,7 +47,7 @@ Module.register("MMM-DailyWeather", {
                     if (i === 0) dayLabel = "<strong style='font-size:1.5em; margin-right: 10px;'>Heute</strong>";
                     else if (i === 1) dayLabel = "<span style='margin-right: 10px;'>Morgen</span>";
                     else dayLabel = `<span style='margin-right: 10px;'>${formattedDate}</span>`;
-                    
+
                     dailyWeather.push({
                         date: dayLabel,
                         temperature: temperatureData[j],
@@ -107,7 +109,7 @@ Module.register("MMM-DailyWeather", {
             const icon = document.createElement("div");
             icon.innerHTML = this.getWeatherIcon(day.weatherCode);
             icon.style.fontSize = "2.5em";
-            
+
             const temp = document.createElement("div");
             temp.innerHTML = `<strong>${day.temperature}°C</strong>`;
             temp.style.fontSize = index === 0 ? "1.5em" : "1.2em";
