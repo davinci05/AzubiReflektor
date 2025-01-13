@@ -18,6 +18,9 @@
 .clock-grid-bottom {
   flex-direction: column-reverse;
 }
+.clock .date {
+  font-size:200px;
+}
 
 .clock-circle {
   place-self: center;
@@ -86,11 +89,9 @@
 }
 
 .digital .date {
-  font-size: 10px; /* Ändere den Wert nach Bedarf */
+  font-size: 1px; /* Ändere den Wert nach Bedarf */
 }
-.clock.date {
-  font-size:200px;
-}
+
 .module.clock .sun{
   font-size: 60px
 }
