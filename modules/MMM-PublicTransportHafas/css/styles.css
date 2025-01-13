@@ -1,10 +1,10 @@
 /*
-All classes used by this module use the prefix "mmm-pth-" (MMM-PublicTransportHafas) to separate
-them from the MagicMirror² core system and other modules.
- */
+Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransportHafas), um sie vom MagicMirror²-Kernsystem und anderen Modulen zu unterscheiden.
+*/
 
 .mmm-pth-wrapper {
   position: relative;
+  font-size: 2em; /* Schriftgröße erhöht für gleichmäßige Vergrößerung */
 }
 
 .mmm-pth-table {
@@ -33,21 +33,21 @@ them from the MagicMirror² core system and other modules.
   max-width: 100ch;
   min-width: 60ch;
   overflow: hidden;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: 0.4em; /* 'rem' in 'em' geändert */
+  padding-right: 0.4em; /* 'rem' in 'em' geändert */
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .mmm-pth-platform-cell {
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: 0.4em; /* 'rem' in 'em' geändert */
+  padding-right: 0.4em; /* 'rem' in 'em' geändert */
 }
 
 .mmm-pth-ruler-cell {
-  border-bottom: 1px dotted #666;
-  border-spacing: 10px;
+  border-bottom: 0.0625em dotted #666; /* 'px' in 'em' umgewandelt */
+  border-spacing: 0.625em; /* 'px' in 'em' umgewandelt */
   line-height: 0;
 }
 
@@ -64,7 +64,7 @@ them from the MagicMirror² core system and other modules.
 }
 
 .mmm-pth-delay {
-  padding: 0 15px 0 5px;
+  padding: 0 0.9375em 0 0.3125em; /* 'px' in 'em' umgewandelt */
   font-size: 0.8em;
   font-weight: bolder;
 }
@@ -77,7 +77,7 @@ them from the MagicMirror² core system and other modules.
   color: green;
 }
 
-/* Marquee for the destination field */
+/* Lauftext für das Zielfeld */
 .mmm-pth-marquee {
   box-sizing: border-box;
   margin: 0 auto;
@@ -93,7 +93,7 @@ them from the MagicMirror² core system and other modules.
 }
 
 @keyframes mmm-pth-marquee {
-  /* Two keyframe positions each to generate a little delay between animations. */
+  /* Zwei Keyframe-Positionen, um eine kleine Verzögerung zwischen den Animationen zu erzeugen. */
   0%,
   30% {
     transform: translate3d(0%, 0, 0);
@@ -105,7 +105,7 @@ them from the MagicMirror² core system and other modules.
   }
 }
 
-/* Marquee for the warning remarks field */
+/* Lauftext für das Warnungshinweisfeld */
 .mmm-pth-warning-remarks {
   white-space: nowrap;
   overflow: hidden;
@@ -131,15 +131,15 @@ them from the MagicMirror² core system and other modules.
   }
 }
 
-/* Styles for line symbols. */
+/* Styles für Liniensymbole */
 .mmm-pth-sign {
   background-color: #333;
   color: white;
   min-width: 5ch;
   font-size: 3em;
   font-weight: bold;
-  margin: 0.2rem auto;
-  padding: 0.4rem;
+  margin: 0.2em auto; /* 'rem' in 'em' geändert */
+  padding: 0.4em; /* 'rem' in 'em' geändert */
   position: relative;
   text-align: center;
   width: max-content;
@@ -148,43 +148,43 @@ them from the MagicMirror² core system and other modules.
 .mmm-pth-bwl-line-sign {
   background-color: #333;
   color: white;
-  margin-right: 0.3em;
+  margin-right: 1em;
 }
 
-/* Default properties for Deutsche Bahn products. */
+/* Standard-Eigenschaften für Deutsche Bahn Produkte */
 .mmm-pth-db-standard {
-  border-radius: 0.25rem;
+  border-radius: 0.25em; /* 'rem' in 'em' geändert */
   font-size: 0.8em;
 }
 
 .ice,
 .ic {
   background-color: white;
-  border-bottom: 4px #f01414 solid;
+  border-bottom: 0.25em #f01414 solid; /* 'px' in 'em' umgewandelt */
   color: #f01414;
 }
 
 .rb,
 .re {
   background-color: rgb(31 131 50);
-  border: 0.5px white solid;
+  border: 0.03125em white solid; /* 'px' in 'em' umgewandelt */
 }
 
 .s {
   background-color: rgb(0 111 53);
-  border: 0.5px white solid;
+  border: 0.03125em white solid; /* 'px' in 'em' umgewandelt */
 }
 
-/* Default properties for busses (general) and obusses (SVV) */
+/* Standard-Eigenschaften für Busse (allgemein) und Oberleitungsbusse (SVV) */
 .bus,
 .obus {
-  border-radius: 1rem;
+  border-radius: 1em; /* 'rem' in 'em' geändert */
   background-color: rgb(122 32 106);
 }
 
-/* Default properties for "Rufbusse" */
+/* Standard-Eigenschaften für "Rufbusse" */
 .ruf {
-  border-radius: 1rem;
+  border-radius: 1em; /* 'rem' in 'em' geändert */
   background-color: rgb(122 32 106);
 
   &::before {
@@ -193,13 +193,13 @@ them from the MagicMirror² core system and other modules.
   }
 }
 
-/* Default properties for trams */
+/* Standard-Eigenschaften für Straßenbahnen */
 .str,
 .stb {
   background-color: rgb(255 0 0);
 }
 
-/* Default properties for subways */
+/* Standard-Eigenschaften für U-Bahnen */
 .u {
   background-color: rgb(0 101 173);
 }
