@@ -98,7 +98,7 @@ let config = {
 		},
 		{
 			module: "MMM-PublicTransportHafas",
-			position: "bottom_right",
+			position: "top_right",
 
 			config: {
 				// Departures options
