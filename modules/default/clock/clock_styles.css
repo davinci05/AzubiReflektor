@@ -82,11 +82,11 @@
   transform-origin: 50% 100%;
 }
 .digital .time {
-  font-size: 800px; /* Ändere den Wert nach Bedarf */
+  font-size: 400px; /* Ändere den Wert nach Bedarf */
 }
 
 .digital .date {
-  font-size: 30px; /* Ändere den Wert nach Bedarf */
+  font-size: 400px; /* Ändere den Wert nach Bedarf */
 }
 
 .module.clock .sun,
