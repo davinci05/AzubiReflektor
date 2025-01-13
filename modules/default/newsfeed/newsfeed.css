@@ -14,12 +14,12 @@ iframe.newsfeed-fullarticle {
   top: -90px;
 }
 .newsfeed .small{
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 60px;
+  line-height: 60px;
 }
 .newsfeed .medium{
-  font-size: 80px;
-  line-height: 80px;
+  font-size: 100px;
+  line-height: 100px;
 }
 .newsfeed-list {
   list-style: none;
