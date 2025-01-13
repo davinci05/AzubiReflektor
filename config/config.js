@@ -110,7 +110,7 @@ let config = {
 				feeds: [
 					{
 						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						url: "https://www1.wdr.de/nachrichten/rheinland/uebersicht-rheinland-100.feed"
 					}
 				],
 				showSourceTitle: true,
