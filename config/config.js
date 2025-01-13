@@ -50,7 +50,7 @@ let config = {
 			config: {
 				displayType:"analog",
 				analogFace: "face-012",
-				analogSize: "600px"
+				analogSize: "900px"
 			}},
 		{
 			module: "clock",
