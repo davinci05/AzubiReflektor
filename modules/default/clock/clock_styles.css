@@ -81,6 +81,13 @@
   background: var(--color-text);
   transform-origin: 50% 100%;
 }
+.digital .time {
+  font-size: 800px; /* Ändere den Wert nach Bedarf */
+}
+
+.digital .date {
+  font-size: 30px; /* Ändere den Wert nach Bedarf */
+}
 
 .module.clock .sun,
 .module.clock .moon {
