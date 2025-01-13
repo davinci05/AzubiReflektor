@@ -11,7 +11,7 @@
 let config = {
 	address: "localhost",	// Address to listen on
 	port: 8080,
-	basePath: "/", 
+	basePath: "/",
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
 
 	useHttps: false,
@@ -59,7 +59,7 @@ let config = {
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/de.german%23holiday%40group.v.calendar.google.com/public/basic.ics"
+						url: "https://ics.calendarlabs.com/56/e261b915/International_Holidays.ics"
 					}
 				]
 			}
