@@ -18,9 +18,9 @@ Module.register("compliments", {
 		remoteFileRefreshInterval: 0,
 		fadeSpeed: 4000,
 		morningStartTime: 3,
-		morningEndTime: 12,
-		afternoonStartTime: 12,
-		afternoonEndTime: 17,
+		morningEndTime: 11,
+		afternoonStartTime: 11,
+		afternoonEndTime: 15,
 		random: true,
 		specialDayUnique: false
 	},
