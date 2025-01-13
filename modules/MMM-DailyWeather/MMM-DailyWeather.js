@@ -90,16 +90,15 @@ Module.register("MMM-DailyWeather", {
         wrapper.style.position = "fixed";
         wrapper.style.top = `${(100 - height) / 2}vh`;  // Zentriert vertikal
         wrapper.style.left = `${(100 - width) / 2}vw`; // Zentriert horizontal
-        wrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-        wrapper.style.borderRadius = "10px";
         wrapper.style.padding = "2vw";
         wrapper.style.color = "white";
         wrapper.style.fontFamily = "Arial, sans-serif";
+        wrapper.style.zIndex = "-1"; // ⬅️ Widget wird hinter andere Elemente gerendert
 
-        // Überschrift
+        // 🎉 Überschrift
         const title = document.createElement("h2");
         title.innerHTML = "Feierabend Wetter";
-        title.style.fontSize = `${width / 10}vw`;  // Skaliert mit Widget-Breite
+        title.style.fontSize = `${width / 10}vw`;
         title.style.marginBottom = "2vh";
         wrapper.appendChild(title);
 
@@ -120,15 +119,15 @@ Module.register("MMM-DailyWeather", {
         this.weatherData.forEach((day, index) => {
             const dayContainer = document.createElement("div");
             dayContainer.style.textAlign = "center";
-            dayContainer.style.margin = `0 ${width / 20}vw`;  // Dynamischer Abstand
+            dayContainer.style.margin = `0 ${width / 20}vw`;
 
             const dayLabel = document.createElement("div");
             dayLabel.innerHTML = day.date;
-            dayLabel.style.fontSize = `${width / 15}vw`; 
+            dayLabel.style.fontSize = `${width / 15}vw`;
             dayLabel.style.fontWeight = index === 0 ? "bold" : "normal";
 
             const icon = document.createElement("div");
-            icon.innerHTML = this.getWeatherIcon(day.weatherCode, width / 10); // Dynamisches Icon
+            icon.innerHTML = this.getWeatherIcon(day.weatherCode, width / 10);
 
             const temp = document.createElement("div");
             temp.innerHTML = `<strong>${day.temperature}°C</strong>`;
