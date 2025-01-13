@@ -19,7 +19,7 @@
   flex-direction: column-reverse;
 }
 .clock .date {
-  font-size:60px;
+  font-size:70px;
 }
 
 .clock-circle {
@@ -92,7 +92,7 @@
   font-size: 1px; /* Ändere den Wert nach Bedarf */
 }
 .week{
-  font-size: 40px
+  font-size: 70px
 }
 .module.clock .sun{
   font-size: 60px
