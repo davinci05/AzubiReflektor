@@ -78,17 +78,7 @@ let config = {
 				lon: -73.971321
 			}
 		},
-		{
-			module: "weather",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "forecast",
-				lat: 40.776676,
-				lon: -73.971321
-			}
-		},
+
 		{
 			module: "newsfeed",
 			position: "middle_center",
