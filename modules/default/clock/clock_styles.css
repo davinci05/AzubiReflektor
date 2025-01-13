@@ -82,7 +82,7 @@
   transform-origin: 50% 100%;
 }
 .digital .time {
-  font-size: 400px; /* Ändere den Wert nach Bedarf */
+  font-size: 1px; /* Ändere den Wert nach Bedarf */
 }
 
 .digital .date {

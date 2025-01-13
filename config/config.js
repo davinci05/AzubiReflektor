@@ -45,6 +45,13 @@ let config = {
 			module: "updatenotification",
 			position: "top_bar"
 		},
+		{module: "clock",
+			position: "top_left",
+			config: {
+				displayType:"analog",
+				analogFace: "face-012",
+				analogSize: "600px"
+			}},
 		{
 			module: "clock",
 			position: "top_left",
@@ -56,13 +63,6 @@ let config = {
 				lon: 6.950610
 			}
 		},
-		{module: "clock",
-		position: "top_left",
-		config: {
-			displayType:"analog",
-			analogFace: "face-012",
-			analogSize: "600px"
-		}},
 		{
 			module: "calendar",
 			header: "International Holidays",
