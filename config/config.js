@@ -54,7 +54,7 @@ let config = {
 				showSunTimes: true,
 				lat: 51.002178,
 				lon: 6.950610,
-				fontSize: 80
+				fontSize: 700
 
 			}
 		},
