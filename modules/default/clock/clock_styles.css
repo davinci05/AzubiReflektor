@@ -19,7 +19,7 @@
   flex-direction: column-reverse;
 }
 .clock .date {
-  font-size:200px;
+  font-size:60px;
 }
 
 .clock-circle {
