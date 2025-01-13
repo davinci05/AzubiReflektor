@@ -30,8 +30,8 @@ them from the MagicMirror² core system and other modules.
 }
 
 .mmm-pth-direction-cell {
-  max-width: 50ch;
-  min-width: 30ch;
+  max-width: 100ch;
+  min-width: 60ch;
   overflow: hidden;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
