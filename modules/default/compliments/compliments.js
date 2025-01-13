@@ -8,7 +8,10 @@ Module.register("compliments", {
 			morning: ["Good morning, handsome!", "Enjoy your day!", "How was your sleep?"],
 			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good today!"],
 			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
-			"....-01-01": ["Happy new year!"]
+			"....-01-01": ["Happy new year!"],
+			"....-10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
+			"....-11-11": ["Kaja Alaaf!"],
+			"....-12-21": ["Heute ist der kürzeste Tag des Jahres! Ab morgen werden die Tage wieder länger! :)"],
 		},
 		updateInterval: 30000,
 		remoteFile: null,

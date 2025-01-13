@@ -68,8 +68,8 @@ Temporary Items
 !/css/main.css
 
 # Ignore users config file but keep the sample.
-/config/*
-!/config/config.js.sample
+
+/config/config.js.sample
 
 # Vim
 ## swap

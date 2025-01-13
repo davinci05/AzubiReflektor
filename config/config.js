@@ -18,7 +18,7 @@ let config = {
 	httpsPrivateKey: "",
 	httpsCertificate: "",
 
-	language: "en",
+	language: "de",
 	locale: "en-US",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
@@ -34,7 +34,15 @@ let config = {
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				displaySeconds: false,
+				showWeek: true,
+				showSunTimes: true,
+				lat: 51.002178,
+				lon: 6.950610
+
+			}
 		},
 		{
 			module: "calendar",
@@ -58,21 +66,32 @@ let config = {
 			module: "MMM-DailyWeather",
 			position: "top_right",
 			config: {
-				location: "Cologne",
-				latitude: 50.9375,
-				longitude: 6.9603,
-				units: "metric",
-				days: 5
+				weatherProvider: "openmeteo",
+				type: "current",
+				lat: 40.776676,
+				lon: -73.971321
+			}
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			header: "Weather Forecast",
+			config: {
+				weatherProvider: "openmeteo",
+				type: "forecast",
+				lat: 40.776676,
+				lon: -73.971321
 			}
 		},
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
+
 				feeds: [
 					{
-						title: "Gartenschau",
-						url: "https://www.tagesschau.de/xml/rss2"
+						title: "New York Times",
+						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
 					}
 				],
 				showSourceTitle: true,
@@ -80,7 +99,31 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		}
+		},
+		{
+			module: "MMM-PublicTransportHafas",
+			position: "bottom_right",
+
+			config: {
+				// Departures options
+				stationID: "900000367",                   // Replace with your stationID!
+				stationName: "Köln Niehl Geestemünder Str.", // Replace with your station name!
+				direction: "",                    // Show only departures heading to this station. (A station ID.)
+				excludedTransportationTypes: [],  // Which transportation types should not be shown on the mirror? (comma-separated list of types) possible values: "tram", "bus", "suburban", "subway", "regional" and "national"
+				ignoredLines: [],                 // Which lines should be ignored? (comma-separated list of line names)
+				timeToStation: 10,                // How long do you need to walk to the next Station?
+
+				// Look and Feel
+				displayLastUpdate: true,          // Display the last time of module update.
+				maxUnreachableDepartures: 0,      // How many unreachable departures should be shown?
+				maxReachableDepartures: 7,        // How many reachable departures should be shown?
+				showColoredLineSymbols: true,     // Want colored line symbols?
+				customLineStyles: "",             // Prefix for the name of the custom css file. ex: Leipzig-lines.css (case sensitive)
+				showOnlyLineNumbers: false,       // Display only the line number instead of the complete name, i. e. "11" instead of "STR 11"
+				showTableHeadersAsSymbols: true,  // Table Headers as symbols or text?
+				useColorForRealtimeInfo: true     // Want colored real time information (timeToStation, early)?
+			}
+		},
 	]
 };
 
