@@ -4,7 +4,7 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
 
 .mmm-pth-wrapper {
   position: relative;
-  font-size: 2em; /* Schriftgröße erhöht für gleichmäßige Vergrößerung */
+  font-size: 2em; /* Basis-Schriftgröße erhöht */
 }
 
 .mmm-pth-table {
@@ -14,10 +14,12 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
 
   > thead {
     text-align: left;
+    font-size: 1em; /* Schriftgröße angepasst */
   }
 
   td {
     vertical-align: middle;
+    font-size: 1em; /* Schriftgröße angepasst */
   }
 }
 
@@ -33,21 +35,21 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
   max-width: 100ch;
   min-width: 60ch;
   overflow: hidden;
-  padding-left: 0.4em; /* 'rem' in 'em' geändert */
-  padding-right: 0.4em; /* 'rem' in 'em' geändert */
+  padding-left: 0.6em; /* Padding erhöht */
+  padding-right: 0.6em;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .mmm-pth-platform-cell {
-  padding-left: 0.4em; /* 'rem' in 'em' geändert */
-  padding-right: 0.4em; /* 'rem' in 'em' geändert */
+  padding-left: 0.6em;
+  padding-right: 0.6em;
 }
 
 .mmm-pth-ruler-cell {
-  border-bottom: 0.0625em dotted #666; /* 'px' in 'em' umgewandelt */
-  border-spacing: 0.625em; /* 'px' in 'em' umgewandelt */
+  border-bottom: 0.125em dotted #666; /* Linie dicker gemacht */
+  border-spacing: 1.25em;
   line-height: 0;
 }
 
@@ -64,8 +66,8 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
 }
 
 .mmm-pth-delay {
-  padding: 0 0.9375em 0 0.3125em; /* 'px' in 'em' umgewandelt */
-  font-size: 0.8em;
+  padding: 0 1em 0 0.5em; /* Padding erhöht */
+  font-size: 0.9em; /* Schriftgröße leicht erhöht */
   font-weight: bolder;
 }
 
@@ -89,6 +91,7 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
     animation: mmm-pth-marquee 3s linear infinite alternate;
     display: inline-block;
     white-space: nowrap;
+    font-size: 1em; /* Schriftgröße angepasst */
   }
 }
 
@@ -109,7 +112,7 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
 .mmm-pth-warning-remarks {
   white-space: nowrap;
   overflow: hidden;
-  font-size: 0.8em;
+  font-size: 0.9em; /* Schriftgröße leicht erhöht */
   width: 80ch;
   display: inline-block;
 
@@ -118,6 +121,7 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
     animation: mmm-pth-warning-remarks 600s linear infinite;
     display: inline-block;
     padding-left: 20%;
+    font-size: 0.9em; /* Schriftgröße leicht erhöht */
   }
 }
 
@@ -136,10 +140,10 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
   background-color: #333;
   color: white;
   min-width: 5ch;
-  font-size: 3em;
+  font-size: 3.5em; /* Schriftgröße der Symbole erhöht */
   font-weight: bold;
-  margin: 0.2em auto; /* 'rem' in 'em' geändert */
-  padding: 0.4em; /* 'rem' in 'em' geändert */
+  margin: 0.4em auto; /* Margin erhöht */
+  padding: 0.6em; /* Padding erhöht */
   position: relative;
   text-align: center;
   width: max-content;
@@ -148,48 +152,54 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
 .mmm-pth-bwl-line-sign {
   background-color: #333;
   color: white;
-  margin-right: 1em;
+  margin-right: 1.5em; /* Margin erhöht */
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 /* Standard-Eigenschaften für Deutsche Bahn Produkte */
 .mmm-pth-db-standard {
-  border-radius: 0.25em; /* 'rem' in 'em' geändert */
-  font-size: 0.8em;
+  border-radius: 0.5em; /* Rundung erhöht */
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 .ice,
 .ic {
   background-color: white;
-  border-bottom: 0.25em #f01414 solid; /* 'px' in 'em' umgewandelt */
+  border-bottom: 0.25em #f01414 solid; /* Linienbreite erhöht */
   color: #f01414;
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 .rb,
 .re {
   background-color: rgb(31 131 50);
-  border: 0.03125em white solid; /* 'px' in 'em' umgewandelt */
+  border: 0.0625em white solid;
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 .s {
   background-color: rgb(0 111 53);
-  border: 0.03125em white solid; /* 'px' in 'em' umgewandelt */
+  border: 0.0625em white solid;
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 /* Standard-Eigenschaften für Busse (allgemein) und Oberleitungsbusse (SVV) */
 .bus,
 .obus {
-  border-radius: 1em; /* 'rem' in 'em' geändert */
+  border-radius: 1.5em; /* Rundung erhöht */
   background-color: rgb(122 32 106);
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 /* Standard-Eigenschaften für "Rufbusse" */
 .ruf {
-  border-radius: 1em; /* 'rem' in 'em' geändert */
+  border-radius: 1.5em;
   background-color: rgb(122 32 106);
+  font-size: 1em;
 
   &::before {
     content: "☎ ";
-    font-size: 0.8em;
+    font-size: 1em; /* Schriftgröße angepasst */
   }
 }
 
@@ -197,33 +207,41 @@ Alle Klassen dieses Moduls verwenden das Präfix "mmm-pth-" (MMM-PublicTransport
 .str,
 .stb {
   background-color: rgb(255 0 0);
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 /* Standard-Eigenschaften für U-Bahnen */
 .u {
   background-color: rgb(0 101 173);
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 .mmm-pth-ice-with-product-name::before {
   content: "ICE ";
+  font-size: 1em; /* Schriftgröße angepasst */
 }
 
 .mmm-pth-ic-with-product-name::before {
   content: "IC ";
+  font-size: 1em;
 }
 
 .mmm-pth-re-with-product-name::before {
   content: "RE ";
+  font-size: 1em;
 }
 
 .mmm-pth-rb-with-product-name::before {
   content: "RB ";
+  font-size: 1em;
 }
 
 .mmm-pth-s-with-product-name::before {
   content: "S";
+  font-size: 1em;
 }
 
 .mmm-pth-u-with-product-name::before {
   content: "U";
+  font-size: 1em;
 }
