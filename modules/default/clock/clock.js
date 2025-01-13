@@ -181,8 +181,8 @@ Module.register("clock", {
 			const untilNextEventString = `${untilNextEvent.hours()}h ${untilNextEvent.minutes()}m`;
 			sunWrapper.innerHTML
 				= `<span class="${isVisible ? "bright" : ""}"><i class="fa-regular fa-sun fa-beat" style="color: #FFD43B;"></i></i> ${untilNextEventString}</span>  `
-				+ `<span><i class="fas fa-arrow-up" aria-hidden="true"></i> ${formatTime(this.config, sunTimes.sunrise)}</span>  `
-				+ `<span><i class="fas fa-arrow-down" aria-hidden="true" style="color: #FFD43B;"></i> ${formatTime(this.config, sunTimes.sunset)}</span>  `;
+				+ `<span><i class="fas fa-arrow-up" aria-hidden="true" style="color: #ffa947;"></i> ${formatTime(this.config, sunTimes.sunrise)}</span>  `
+				+ `<span><i class="fas fa-arrow-down" aria-hidden="true" style="color: #57b6ff;"></i> ${formatTime(this.config, sunTimes.sunset)}</span>  `;
 			digitalWrapper.appendChild(sunWrapper);
 		}
 
