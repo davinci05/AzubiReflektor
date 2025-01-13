@@ -4,8 +4,9 @@ Module.register("MMM-DailyWeather", {
         latitude: 50.9375,   // Breitengrad für Köln
         longitude: 6.9603,   // Längengrad für Köln
         units: "metric",    // "metric" für Celsius, "imperial" für Fahrenheit
-        days: 3,              // Anzahl der Tage, die angezeigt werden
-        fixedHeight: 140      // Erhöhte feste Höhe für bessere Darstellung und Vermeidung von Überlappungen
+        days: 3,            // Anzahl der Tage, die angezeigt werden
+        widgetWidth: 50,    // Breite als Prozentsatz des Bildschirms
+        widgetHeight: 50    // Höhe als Prozentsatz des Bildschirms
     },
 
     start: function () {
@@ -34,17 +35,17 @@ Module.register("MMM-DailyWeather", {
         const temperatureData = data.hourly.temperature_2m;
         const weatherCodeData = data.hourly.weathercode;
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < this.config.days; i++) {
             const date = new Date();
             date.setDate(date.getDate() + i);
-            const formattedDate = date.toLocaleDateString("de-DE"); // Format: dd.mm.yyyy
+            const formattedDate = date.toLocaleDateString("de-DE");
 
             for (let j = 0; j < hourlyData.length; j++) {
                 if (hourlyData[j].includes(date.toISOString().split("T")[0]) && hourlyData[j].includes("15:00")) {
                     let dayLabel = "";
-                    if (i === 0) dayLabel = "<strong style='font-size:1.5em; margin-right: 10px;'>Heute</strong>";
-                    else if (i === 1) dayLabel = "<span style='margin-right: 10px;'>Morgen</span>";
-                    else dayLabel = `<span style='margin-right: 10px;'>${formattedDate}</span>`;
+                    if (i === 0) dayLabel = "<strong>Heute</strong>";
+                    else if (i === 1) dayLabel = "Morgen";
+                    else dayLabel = formattedDate;
                     
                     dailyWeather.push({
                         date: dayLabel,
@@ -58,65 +59,88 @@ Module.register("MMM-DailyWeather", {
         return dailyWeather;
     },
 
-    getWeatherIcon: function (weatherCode) {
+    getWeatherIcon: function (weatherCode, size) {
         const icons = {
-            0: "☀️", // Klarer Himmel
-            1: "🌤️", // Leicht bewölkt
-            2: "⛅", // Teilweise bewölkt
-            3: "☁️", // Bewölkt
-            45: "🌫️", // Nebel
-            48: "🌫️", // Gefrierender Nebel
-            51: "🌦️", // Leichter Nieselregen
-            61: "🌧️", // Leichter Regen
-            80: "🌦️", // Vereinzelte Schauer
-            95: "⛈️" // Gewitter
+            0: "☀️",
+            1: "🌤️",
+            2: "⛅",
+            3: "☁️",
+            45: "🌫️",
+            48: "🌫️",
+            51: "🌦️",
+            61: "🌧️",
+            80: "🌦️",
+            95: "⛈️"
         };
-        return icons[weatherCode] || "❓"; // Standard-Icon falls kein Wettercode erkannt wird
+        return `<span style="font-size:${size}vw;">${icons[weatherCode] || "❓"}</span>`;
     },
 
     getDom: function () {
         const wrapper = document.createElement("div");
-        wrapper.className = "small";
-        wrapper.style.height = this.config.fixedHeight + "px";
-        wrapper.style.overflow = "hidden";
+        const width = this.config.widgetWidth;
+        const height = this.config.widgetHeight;
+
+        wrapper.className = "weather-container";
+        wrapper.style.width = `${width}vw`;
+        wrapper.style.height = `${height}vh`;
         wrapper.style.display = "flex";
-        wrapper.style.flexDirection = "row";
-        wrapper.style.justifyContent = "space-around";
+        wrapper.style.flexDirection = "column";
+        wrapper.style.justifyContent = "center";
         wrapper.style.alignItems = "center";
-        wrapper.style.marginBottom = "15px";
-        wrapper.style.maxWidth = "100%";
         wrapper.style.position = "fixed";
-        wrapper.style.top = "10px";
-        wrapper.style.right = "10px";
-        wrapper.style.zIndex = "100";
+        wrapper.style.top = `${(100 - height) / 2}vh`;  // Zentriert vertikal
+        wrapper.style.left = `${(100 - width) / 2}vw`; // Zentriert horizontal
+        wrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+        wrapper.style.borderRadius = "10px";
+        wrapper.style.padding = "2vw";
+        wrapper.style.color = "white";
+        wrapper.style.fontFamily = "Arial, sans-serif";
+
+        // Überschrift
+        const title = document.createElement("h2");
+        title.innerHTML = "Feierabend Wetter";
+        title.style.fontSize = `${width / 10}vw`;  // Skaliert mit Widget-Breite
+        title.style.marginBottom = "2vh";
+        wrapper.appendChild(title);
 
         if (!this.weatherData) {
-            wrapper.innerHTML = "Lade Wetterdaten...";
+            const loading = document.createElement("div");
+            loading.innerHTML = "Lade Wetterdaten...";
+            loading.style.fontSize = `${width / 15}vw`; 
+            wrapper.appendChild(loading);
             return wrapper;
         }
+
+        // Wetterdaten Container
+        const weatherContainer = document.createElement("div");
+        weatherContainer.style.display = "flex";
+        weatherContainer.style.justifyContent = "space-around";
+        weatherContainer.style.width = "100%";
 
         this.weatherData.forEach((day, index) => {
             const dayContainer = document.createElement("div");
             dayContainer.style.textAlign = "center";
-            dayContainer.style.margin = "0 20px"; // Mehr Abstand zwischen den Elementen
+            dayContainer.style.margin = `0 ${width / 20}vw`;  // Dynamischer Abstand
 
             const dayLabel = document.createElement("div");
             dayLabel.innerHTML = day.date;
+            dayLabel.style.fontSize = `${width / 15}vw`; 
             dayLabel.style.fontWeight = index === 0 ? "bold" : "normal";
 
             const icon = document.createElement("div");
-            icon.innerHTML = this.getWeatherIcon(day.weatherCode);
-            icon.style.fontSize = "2.5em";
-            
+            icon.innerHTML = this.getWeatherIcon(day.weatherCode, width / 10); // Dynamisches Icon
+
             const temp = document.createElement("div");
             temp.innerHTML = `<strong>${day.temperature}°C</strong>`;
-            temp.style.fontSize = index === 0 ? "1.5em" : "1.2em";
+            temp.style.fontSize = `${width / 12}vw`;
 
             dayContainer.appendChild(dayLabel);
             dayContainer.appendChild(icon);
             dayContainer.appendChild(temp);
-            wrapper.appendChild(dayContainer);
+            weatherContainer.appendChild(dayContainer);
         });
+
+        wrapper.appendChild(weatherContainer);
 
         return wrapper;
     }
