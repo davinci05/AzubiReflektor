@@ -89,7 +89,7 @@
   font-size: 1px; /* Ändere den Wert nach Bedarf */
 }
 .clock-date {
-  font-size:40px;
+  font-size:200px;
 }
 .module.clock .sun{
   font-size: 40px
