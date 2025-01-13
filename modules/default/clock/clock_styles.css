@@ -86,10 +86,12 @@
 }
 
 .digital .date {
-  font-size: 400px; /* Ändere den Wert nach Bedarf */
+  font-size: 40px; /* Ändere den Wert nach Bedarf */
 }
 
-.module.clock .sun,
+.module.clock .sun{
+  font-size: 40px
+}
 .module.clock .moon {
   display: flex;
 }
