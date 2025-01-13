@@ -13,9 +13,13 @@ iframe.newsfeed-fullarticle {
   bottom: inherit;
   top: -90px;
 }
+.newsfeed .small{
+  font-size: 40px;
+  line-height: 40px;
+}
 .newsfeed .medium{
-  font-size: 200px;
-  line-height: 200px;
+  font-size: 80px;
+  line-height: 80px;
 }
 .newsfeed-list {
   list-style: none;
