@@ -5,7 +5,7 @@ Module.register("MMM-DailyWeather", {
         longitude: 6.9603,   // Längengrad für Köln
         units: "metric",    // "metric" für Celsius, "imperial" für Fahrenheit
         days: 3,            // Anzahl der Tage, die angezeigt werden
-        fixedHeight: "50vh" // Größe auf 50% des Bildschirms setzen
+        fixedHeight: "35vh" // Größe auf 50% des Bildschirms setzen
     },
 
     start: function () {
