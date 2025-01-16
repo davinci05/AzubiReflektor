@@ -121,14 +121,14 @@ let config = {
 			}
 		},
 		{
-			module: 'MMM-WebView',
-			position: 'bottom_left',
+			module: 'MMM-Webview',
+			position: 'bottom_bar',	// This can be any of the regions.
 			config: {
-			  url: 'https://google.com',
-			  width: '640px',
-			  height: '480px',
-			},
-		},  
+				updateInterval: 15 * 1000, // rebuild the webview every 30 seconds
+				getURL: () => "http://magicmirror.builders/",
+				cssClassname: 'webviewFullscreen',
+			}
+		},
 	]
 };
 
