@@ -122,7 +122,7 @@ let config = {
 		},
 		{
 			module: 'MMM-WebView',
-			position: 'top_center',
+			position: 'bottom_left',
 			config: {
 			  url: 'http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=now-6h&to=now&timezone=browser',
 			  width: '640px',
