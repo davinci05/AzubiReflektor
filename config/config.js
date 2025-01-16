@@ -121,7 +121,7 @@ let config = {
 			}
 		},
 		{
-			module: 'MMM-GrafanaWebview',
+			module: 'MMM-Sensorview',
 			position: 'fullscreen_below', // or any other position you prefer
 			config: {
 				url: "http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk",
