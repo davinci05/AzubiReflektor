@@ -122,7 +122,7 @@ let config = {
 		},
 		{
 			module: 'MMM-Webview',
-			position: 'bottom_bar',	// This can be any of the regions.
+			position: 'bottom_left',	// This can be any of the regions.
 			config: {
 				updateInterval: 15 * 1000, // rebuild the webview every 30 seconds
 				getURL: () => "http://magicmirror.builders/",
