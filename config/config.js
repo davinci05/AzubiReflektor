@@ -130,8 +130,7 @@ let config = {
 				  "frameborder=0",
 			  ],
 			  embed: [
-				  "https://magicmirror.builders/",
-				  "https://www.youtube.com/embed/dIHr96KqfDI"
+				"http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk"
 			  ]
 			},
 		},
