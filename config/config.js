@@ -37,7 +37,8 @@ let config = {
 			config: {
 				displayType:"analog",
 				analogFace: "face-012",
-				analogSize: "300px"
+				analogSize: "300px",
+				secondsColor: '#FF0090'
 			}},
 		{
 			module: "clock",
