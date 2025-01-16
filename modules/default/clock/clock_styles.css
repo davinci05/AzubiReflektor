@@ -47,8 +47,8 @@
   display: block;
 }
 
-.clock-hour {
-  width: 20px;
+.clock-hour { /*Sekund*/
+  width: 10px;
   height: 0;
   position: absolute;
   top: 50%;
@@ -57,7 +57,7 @@
   padding: 2px 0 2px 25%; /* indicator length & thickness */
   background: #f01414;
   transform-origin: 100% 50%;
-  border-radius: 40px 0 0 40px;
+  border-radius: 4px 0 0 4px;
 }
 
 .clock-minute {
