@@ -57,7 +57,7 @@
   padding: 2px 0 2px 25%; /* indicator length & thickness */
   background: #f01414;
   transform-origin: 100% 50%;
-  border-radius: 4px 0 0 4px;
+  border-radius: 20px 0 0 20px;
 }
 
 .clock-minute {
