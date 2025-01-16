@@ -47,17 +47,17 @@
   display: block;
 }
 
-.clock-hour { /*Sekund*/
+.clock-hour {
   width: 10px;
   height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -2px 0 -2px -25%; /* numbers must match negative length & thickness */
-  padding: 2px 0 2px 25%; /* indicator length & thickness */
+  margin: -35% -2px 0; /* numbers must match negative length & thickness */
+  padding: 35% 2px 0; /* indicator length & thickness */
   background: #f01414;
   transform-origin: 100% 50%;
-  border-radius: 4px 0 0 4px;
+  border-radius: 20px 0 0 20px;
 }
 
 .clock-minute {
@@ -74,7 +74,7 @@
 }
 
 .clock-second {
-  width: 10px;
+  width: 2px;
   height: 0;
   position: absolute;
   top: 50%;
