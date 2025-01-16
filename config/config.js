@@ -121,14 +121,14 @@ let config = {
 			}
 		},
 		{
-			module: "MMM-iFrame",
-			position: "middle_center", 
+			module: 'MMM-WebView',
+			position: 'top_center',
 			config: {
-			  url: "http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk",  
-			  width: "800px", 
-			  height: "600px",  
-			}
-		},		  
+			  url: 'http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=now-6h&to=now&timezone=browser',
+			  width: '640px',
+			  height: '480px',
+			},
+		},  
 	]
 };
 
