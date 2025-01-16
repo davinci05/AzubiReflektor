@@ -55,9 +55,9 @@
   left: 50%;
   margin: -2px 0 -2px -25%; /* numbers must match negative length & thickness */
   padding: 2px 0 2px 25%; /* indicator length & thickness */
-  background: #ffa500;
+  background: #f01414;
   transform-origin: 100% 50%;
-  border-radius: 3px 0 0 3px;
+  border-radius: 10px 0 0 3px;
 }
 
 .clock-minute {
@@ -68,7 +68,7 @@
   left: 50%;
   margin: -35% -2px 0; /* numbers must match negative length & thickness */
   padding: 35% 2px 0; /* indicator length & thickness */
-  background: #ffa500;
+  background: #f01414;
   transform-origin: 50% 100%;
   border-radius: 3px 0 0 3px;
 }
