@@ -121,14 +121,15 @@ let config = {
 			}
 		},
 		{
-			module: 'MMM-Webview',
-			position: 'bottom_left',	// This can be any of the regions.
+			module: 'MMM-GrafanaWebview',
+			position: 'fullscreen_below', // or any other position you prefer
 			config: {
-				updateInterval: 15 * 1000, // rebuild the webview every 30 seconds
-				getURL: () => "http://magicmirror.builders/",
-				cssClassname: 'webviewFullscreen',
+				url: "http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk",
+				width: "100%", // Adjust width as needed
+				height: "100%", // Adjust height as needed
+				updateInterval: 30 * 1000 // 30 seconds
 			}
-		},
+		},		
 	]
 };
 
