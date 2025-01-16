@@ -121,6 +121,20 @@ let config = {
 				useColorForRealtimeInfo: true     // Want colored real time information (timeToStation, early)?
 			}
 		},
+		{
+			module: "MMM-EmbedURL",
+			position: "bottom_left",
+			header: "Embed-URL",
+			config: {
+			  updateInterval: 30,
+			  attributes: [
+				  "frameborder=0",
+			  ],
+			  embed: [
+				"http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk"
+			  ]
+			},
+		},
 	]
 };
 
