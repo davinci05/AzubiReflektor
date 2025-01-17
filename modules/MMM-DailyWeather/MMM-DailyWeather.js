@@ -6,7 +6,7 @@ Module.register("MMM-DailyWeather", {
         units: "metric",    // "metric" für Celsius, "imperial" für Fahrenheit
         days: 3,            // Anzahl der Tage, die angezeigt werden
         widgetWidth: 33,    // Breite als Prozentsatz des Bildschirms
-        widgetHeight: 33    // Höhe als Prozentsatz des Bildschirms
+        widgetHeight: 10    // Höhe als Prozentsatz des Bildschirms
     },
 
     start: function () {
