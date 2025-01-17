@@ -56,7 +56,7 @@
   margin: -35% -2px 0; /* numbers must match negative length & thickness */
   padding: 35% 2px 0; /* indicator length & thickness */
   background: #f01414;
-  transform-origin: 50% 50%;
+  transform-origin: 50% 100%;
   border-radius: 20px 0 0 20px;
 }
 
