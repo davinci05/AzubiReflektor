@@ -27,8 +27,8 @@ Module.register("clock", {
 
 		showSunTimes: false,
 		showMoonTimes: false, // options: false, 'times' (rise/set), 'percent' (lit percent), 'phase' (current phase), or 'both' (percent & phase)
-		lat: 47.630539,
-		lon: -122.344147
+		lat: 51.002178,
+		lon: 6.950610
 	},
 	// Define required scripts.
 	getScripts () {
