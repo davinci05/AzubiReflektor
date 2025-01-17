@@ -6,7 +6,7 @@ Module.register("clock", {
 		displayType: "digital", // options: digital, analog, both
 
 		timeFormat: config.timeFormat,
-		timezone: null,
+		timezone: CET,
 
 		displaySeconds: true,
 		showPeriod: true,

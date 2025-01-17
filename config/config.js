@@ -52,7 +52,7 @@ let config = {
 				displaySeconds: false,
 				showWeek: true,
 				showSunTimes: true,
-				timezone: "Europe/Berlin",
+				timezone: "CET",
 				lat: 51.002178,
 				lon: 6.950610
 			}
