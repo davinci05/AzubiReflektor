@@ -69,7 +69,7 @@ let config = {
 		},
 		{
 			module: "compliments",
-			position: "lower_third"
+			position: "upper_third"
 		},
 		{
 			module: "newsfeed",
