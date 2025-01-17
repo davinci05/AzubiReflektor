@@ -19,7 +19,7 @@ let config = {
 	httpsCertificate: "",
 
 	language: "de",
-	locale: "de-DE",
+	locale: "en-US",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
 	units: "metric",
@@ -38,7 +38,7 @@ let config = {
 				displayType:"analog",
 				analogFace: "face-012",
 				analogSize: "300px",
-				secondsColor: '#FF0090',
+				secondsColor: '#FF0090'
 			}},
 		{
 			module: "clock",
@@ -47,7 +47,6 @@ let config = {
 				displaySeconds: false,
 				showWeek: true,
 				showSunTimes: true,
-				timezone: "Europe/Berlin",
 				lat: 51.002178,
 				lon: 6.950610
 			}
@@ -70,6 +69,17 @@ let config = {
 			module: "compliments",
 			position: "lower_third"
 		},
+		{
+			module: "MMM-DailyWeather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openmeteo",
+				type: "current",
+				lat: 40.776676,
+				lon: -73.971321
+			}
+		},
+
 		{
 			module: "newsfeed",
 			position: "middle_center",
@@ -112,26 +122,15 @@ let config = {
 			}
 		},
 		{
-			module: "MMM-DailyWeather",
-			position: "top_right",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "current",
-				lat: 51.00199599795156,
-				lon: 6.95080889334131
-			}
-		},
-		{
 			module: "MMM-EmbedURL",
 			position: "bottom_left",
-			header: "Embed-URL",
 			config: {
 			  updateInterval: 30,
 			  attributes: [
 				  "frameborder=0",
 			  ],
 			  embed: [
-				"http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk"
+				"http://localhost:3000/d/ce9uqxn767jeoe/data?orgId=1&from=now-24h&to=now&timezone=browser&refresh=5m&theme=dark"
 			  ]
 			},
 		},
