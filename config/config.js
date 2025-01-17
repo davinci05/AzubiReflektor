@@ -19,7 +19,7 @@ let config = {
 	httpsCertificate: "",
 
 	language: "de",
-	locale: "en-US",
+	locale: "de-DE",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
 	units: "metric",
