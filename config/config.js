@@ -39,7 +39,6 @@ let config = {
 				analogFace: "face-012",
 				analogSize: "300px",
 				secondsColor: '#FF0090',
-				timeOffset: -3,            // Offset in Stunden
 			}},
 		{
 			module: "clock",
