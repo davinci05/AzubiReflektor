@@ -39,7 +39,8 @@ let config = {
 				analogFace: "face-012",
 				analogSize: "300px",
 				secondsColor: '#FF0090',
-				timezone: "Europe/Cologne"
+				lat: 51.002178,
+				lon: 6.950610
 			}},
 		{
 			module: "clock",
@@ -68,7 +69,7 @@ let config = {
 		},
 		{
 			module: "compliments",
-			position: "middle_center"
+			position: "lower_third"
 		},
 		{
 			module: "MMM-DailyWeather",
@@ -83,7 +84,7 @@ let config = {
 
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			position: "middle_center",
 			config: {
 
 				feeds: [
