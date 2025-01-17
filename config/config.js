@@ -67,7 +67,7 @@ let config = {
 		},
 		{
 			module: "compliments",
-			position: "lower_third",
+			position: "middle-center",
 			config:{
 				"....-01-01": ["Happy new year!"],
 				"....-10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
