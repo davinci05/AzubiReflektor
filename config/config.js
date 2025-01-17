@@ -73,10 +73,11 @@ let config = {
 			module: "MMM-DailyWeather",
 			position: "top_right",
 			config: {
-				weatherProvider: "openmeteo",
-				type: "current",
-				lat: 40.776676,
-				lon: -73.971321
+				location: "Cologne",
+				latitude: 50.9375,
+				longitude: 6.9603,
+				units: "metric",
+				days: 3
 			}
 		},
 
