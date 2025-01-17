@@ -5,8 +5,8 @@ Module.register("MMM-DailyWeather", {
         longitude: 6.9603,   // Längengrad für Köln
         units: "metric",    // "metric" für Celsius, "imperial" für Fahrenheit
         days: 3,            // Anzahl der Tage, die angezeigt werden
-        widgetWidth: 50,    // Breite als Prozentsatz des Bildschirms
-        widgetHeight: 50    // Höhe als Prozentsatz des Bildschirms
+        widgetWidth: 33,    // Breite als Prozentsatz des Bildschirms (1/3 des Bildschirms)
+        widgetHeight: 33    // Höhe als Prozentsatz des Bildschirms (1/3 des Bildschirms)
     },
 
     start: function () {
@@ -93,9 +93,8 @@ Module.register("MMM-DailyWeather", {
         wrapper.style.padding = "2vw";
         wrapper.style.color = "white";
         wrapper.style.fontFamily = "Arial, sans-serif";
-        wrapper.style.zIndex = "-1"; // ⬅️ Widget wird hinter andere Elemente gerendert
 
-        // 🎉 Überschrift
+        // Überschrift
         const title = document.createElement("h2");
         title.innerHTML = "Feierabend Wetter";
         title.style.fontSize = `${width / 10}vw`;
