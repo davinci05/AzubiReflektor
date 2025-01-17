@@ -62,7 +62,7 @@ let config = {
 				latitude: 50.9375,
 				longitude: 6.9603,
 				units: "metric",
-				days: 5
+				days: 3
 			}
 		},
 		{
