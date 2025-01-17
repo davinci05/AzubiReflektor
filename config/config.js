@@ -78,7 +78,7 @@ let config = {
 				"....-06-17":["Happy Birthday Tim! Du bist der Beste!"],
 				"....-10-16":["Happy Birthday Sascha! Du bist der Beste!"],
 				"....-12-18":["Happy Birthday Stefan! Du bist der Beste!"],
-				"2025-01-18":["Das ist ein Test"],
+				"....-01-18":["Das ist ein Test"],
 
 			}
 		},
