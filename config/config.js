@@ -95,7 +95,7 @@ let config = {
 
 		{
 			module: "newsfeed",
-			position: "middle_center",
+			position: "bottom_bar",
 			config: {
 
 				feeds: [
