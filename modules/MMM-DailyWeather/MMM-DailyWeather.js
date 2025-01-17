@@ -98,7 +98,6 @@ Module.register("MMM-DailyWeather", {
         wrapper.style.padding = "2vw";
         wrapper.style.color = "white";
         wrapper.style.fontFamily = "Arial, sans-serif";
-        wrapper.style.
 
         // Überschrift
         const title = document.createElement("h2");
