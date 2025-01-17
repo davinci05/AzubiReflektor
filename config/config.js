@@ -134,6 +134,16 @@ let config = {
 				useColorForRealtimeInfo: true     // Want colored real time information (timeToStation, early)?
 			}
 		},
+		{
+			module: "MMM-DailyWeather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openmeteo",
+				type: "current",
+				lat: 40.776676,
+				lon: -73.971321
+			}
+		}
 	]
 };
 
