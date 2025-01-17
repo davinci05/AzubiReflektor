@@ -230,7 +230,7 @@ Module.register("clock", {
 			}
 			const second = now.seconds() * 6,
 				minute = now.minute() * 6 + second / 60,
-				hour = ((now.hours() % 12) / 12) * 360 + 90 + minute / 12;
+				hour = (((now.hours() % 12) / 12) * 360 + 90 + minute / 12)+3;
 
 			// Create wrappers
 			analogWrapper.style.width = this.config.analogSize;
