@@ -39,7 +39,7 @@ let config = {
 				analogFace: "face-012",
 				analogSize: "300px",
 				secondsColor: '#FF0090',
-				timezone: "Europe/Amsterdam"
+				timezone: "etc/GMT+2"
 			}},
 		{
 			module: "clock",
