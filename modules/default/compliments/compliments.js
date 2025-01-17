@@ -4,10 +4,6 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: ["Hey!", "Hallo!", "Na, alles klar?", "Was geht?", "Servus!", "Grüß dich!", "Hi, Schnucki!", "Moin Moin!"],
-			morning:  ["Guten Morgen, Schlafmütze!", "Morgenstund hat Gold im Mund... oder so!", "Na, ausgeschlafen?", "Holla die Kochfee, schon wach?", "Guten Morgen, Sonnenschein!", "Bist du auch schon vom Kaffee abhängig?", "Früh aufstehen ist nicht meins, aber für dich mach ich’s!", "Heute wird der Tag gerettet!" ],
-			afternoon: ["Na, schon Kaffeepause?", "Mittagstief? Nicht mit mir!", "Alles im grünen Bereich?", "Wie läuft’s so?", "Hast du schon was Tolles erlebt?", "Was gibt’s Leckeres zu essen?", "Der Nachmittag kann kommen!" ],
-			evening: ["Abend! Was gibt’s Neues?", "Wie war dein Tag, so im Großen und Ganzen?", "Feierabend-Feeling?", "Entspannter Abend gewünscht!", "Na, bereit für Netflix und Chill?", "Lass den Tag Revue passieren!", "Schönen Abend noch!"],
 			"....-01-01": ["Happy new year!"],
 			"....-10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
 			"....-11-11": ["Kaja Alaaf!"],
@@ -17,7 +13,12 @@ Module.register("compliments", {
 			"....-06-17":["Happy Birthday Tim! Du bist der Beste!"],
 			"....-10-16":["Happy Birthday Sascha! Du bist der Beste!"],
 			"....-12-18":["Happy Birthday Stefan! Du bist der Beste!"],
-			"....-01-18":["Das ist ein Test"]
+			"....-01-18":["Das ist ein Test"],
+			anytime: ["Hey!", "Hallo!", "Na, alles klar?", "Was geht?", "Servus!", "Grüß dich!", "Hi, Schnucki!", "Moin Moin!"],
+			morning:  ["Guten Morgen, Schlafmütze!", "Morgenstund hat Gold im Mund... oder so!", "Na, ausgeschlafen?", "Holla die Kochfee, schon wach?", "Guten Morgen, Sonnenschein!", "Bist du auch schon vom Kaffee abhängig?", "Früh aufstehen ist nicht meins, aber für dich mach ich’s!", "Heute wird der Tag gerettet!" ],
+			afternoon: ["Na, schon Kaffeepause?", "Mittagstief? Nicht mit mir!", "Alles im grünen Bereich?", "Wie läuft’s so?", "Hast du schon was Tolles erlebt?", "Was gibt’s Leckeres zu essen?", "Der Nachmittag kann kommen!" ],
+			evening: ["Abend! Was gibt’s Neues?", "Wie war dein Tag, so im Großen und Ganzen?", "Feierabend-Feeling?", "Entspannter Abend gewünscht!", "Na, bereit für Netflix und Chill?", "Lass den Tag Revue passieren!", "Schönen Abend noch!"]
+
 
 		},
 		updateInterval: 30000,
