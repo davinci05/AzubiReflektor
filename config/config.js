@@ -43,7 +43,7 @@ let config = {
 				analogFace: "face-012",
 				analogSize: "300px",
 				secondsColor: '#FF0090',
-				timeOffset: -3,            // Offset in Stunden
+				timezone: "Europe/Berlin",
 			}},
 		{
 			module: "clock",
@@ -52,7 +52,7 @@ let config = {
 				displaySeconds: false,
 				showWeek: true,
 				showSunTimes: true,
-				timezone: "CET",
+				timezone: "Europe/Berlin",
 				lat: 51.002178,
 				lon: 6.950610
 			}
