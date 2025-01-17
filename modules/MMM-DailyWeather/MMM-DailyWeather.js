@@ -87,9 +87,9 @@ Module.register("MMM-DailyWeather", {
         wrapper.style.flexDirection = "column";
         wrapper.style.justifyContent = "center";
         wrapper.style.alignItems = "center";
-        wrapper.style.position = "fixed";
-        wrapper.style.top = `${(100 - height) / 2}vh`;  // Zentriert vertikal
-        wrapper.style.left = `${(100 - width) / 2}vw`; // Zentriert horizontal
+        wrapper.style.position = "";
+        wrapper.style.top = ``;  // Zentriert vertikal
+        wrapper.style.left = ``; // Zentriert horizontal
         wrapper.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
         wrapper.style.borderRadius = "10px";
         wrapper.style.padding = "2vw";
