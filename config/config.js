@@ -68,7 +68,7 @@ let config = {
 		},
 		{
 			module: "compliments",
-			position: "lower_third"
+			position: "middle_center"
 		},
 		{
 			module: "MMM-DailyWeather",
@@ -83,7 +83,7 @@ let config = {
 
 		{
 			module: "newsfeed",
-			position: "middle_center",
+			position: "bottom_bar",
 			config: {
 
 				feeds: [
