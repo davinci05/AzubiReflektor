@@ -72,19 +72,8 @@ let config = {
 			position: "lower_third"
 		},
 		{
-			module: "MMM-DailyWeather",
-			position: "top_right",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "current",
-				lat: 51.00199599795156,
-				lon: 6.95080889334131
-			}
-		},
-
-		{
 			module: "newsfeed",
-			position: "middle_center",
+			position: "bottom_bar",
 			config: {
 
 				feeds: [
@@ -123,6 +112,17 @@ let config = {
 				useColorForRealtimeInfo: true     // Want colored real time information (timeToStation, early)?
 			}
 		},
+		{
+			module: "MMM-DailyWeather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openmeteo",
+				type: "current",
+				lat: 51.00199599795156,
+				lon: 6.95080889334131
+			}
+		},
+
 		{
 			module: "MMM-EmbedURL",
 			position: "bottom_left",
