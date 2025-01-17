@@ -39,8 +39,7 @@ let config = {
 				analogFace: "face-012",
 				analogSize: "300px",
 				secondsColor: '#FF0090',
-				lat: 51.002178,
-				lon: 6.950610
+				timezone: "Europe/Cologne"
 			}},
 		{
 			module: "clock",
