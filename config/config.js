@@ -11,14 +11,14 @@
 let config = {
 	address: "localhost",	// Address to listen on
 	port: 8080,
-	basePath: "/", 
+	basePath: "/",
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
 
 	useHttps: false,
 	httpsPrivateKey: "",
 	httpsCertificate: "",
 
-	language: "en",
+	language: "de",
 	locale: "en-US",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
@@ -32,9 +32,24 @@ let config = {
 			module: "updatenotification",
 			position: "top_bar"
 		},
+		{module: "clock",
+			position: "top_left",
+			config: {
+				displayType:"analog",
+				analogFace: "face-012",
+				analogSize: "300px",
+				secondsColor: '#FF0090'
+			}},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				displaySeconds: false,
+				showWeek: true,
+				showSunTimes: true,
+				lat: 51.002178,
+				lon: 6.950610
+			}
 		},
 		{
 			module: "calendar",
@@ -45,7 +60,7 @@ let config = {
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/de.german%23holiday%40group.v.calendar.google.com/public/basic.ics"
+						url: "https://ics.calendarlabs.com/56/e261b915/International_Holidays.ics"
 					}
 				]
 			}
@@ -65,14 +80,16 @@ let config = {
 				days: 3
 			}
 		},
+
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			position: "middle_center",
 			config: {
+
 				feeds: [
 					{
-						title: "Gartenschau",
-						url: "https://www.tagesschau.de/xml/rss2"
+						title: "WDR Rheinland",
+						url: "https://www1.wdr.de/nachrichten/rheinland/uebersicht-rheinland-100.feed"
 					}
 				],
 				showSourceTitle: true,
@@ -80,7 +97,45 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		}
+		},
+		{
+			module: "MMM-PublicTransportHafas",
+			position: "top_right",
+
+			config: {
+				// Departures options
+				stationID: "900000367",                   // Replace with your stationID!
+				stationName: "Köln Niehl Geestemünder Str.", // Replace with your station name!
+				direction: "",                    // Show only departures heading to this station. (A station ID.)
+				excludedTransportationTypes: [],  // Which transportation types should not be shown on the mirror? (comma-separated list of types) possible values: "tram", "bus", "suburban", "subway", "regional" and "national"
+				ignoredLines: [],                 // Which lines should be ignored? (comma-separated list of line names)
+				timeToStation: 10,                // How long do you need to walk to the next Station?
+
+				// Look and Feel
+				displayLastUpdate: true,          // Display the last time of module update.
+				maxUnreachableDepartures: 0,      // How many unreachable departures should be shown?
+				maxReachableDepartures: 7,        // How many reachable departures should be shown?
+				showColoredLineSymbols: true,     // Want colored line symbols?
+				customLineStyles: "",             // Prefix for the name of the custom css file. ex: Leipzig-lines.css (case sensitive)
+				showOnlyLineNumbers: false,       // Display only the line number instead of the complete name, i. e. "11" instead of "STR 11"
+				showTableHeadersAsSymbols: true,  // Table Headers as symbols or text?
+				useColorForRealtimeInfo: true     // Want colored real time information (timeToStation, early)?
+			}
+		},
+		{
+			module: "MMM-EmbedURL",
+			position: "bottom_left",
+			header: "Embed-URL",
+			config: {
+			  updateInterval: 30,
+			  attributes: [
+				  "frameborder=0",
+			  ],
+			  embed: [
+				"http://mm2.local:3000/d/ce9uqxn767jeoe/data?orgId=1&from=2025-01-13T06:23:59.954Z&to=2025-01-13T12:23:59.954Z&timezone=browser&kiosk"
+			  ]
+			},
+		},
 	]
 };
 

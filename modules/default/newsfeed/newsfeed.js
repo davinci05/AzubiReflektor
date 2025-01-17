@@ -4,7 +4,7 @@ Module.register("newsfeed", {
 		feeds: [
 			{
 				title: "New York Times",
-				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+				url: "https://www1.wdr.de/nachrichten/rheinland/uebersicht-rheinland-100.feed",
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],
