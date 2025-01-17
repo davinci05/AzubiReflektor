@@ -8,7 +8,8 @@ let config = {
 			config: {
 				displayType: "analog",
 				analogFace: "face-006",
-				showDate: false
+				showDate: false,
+				timezone: "Europe/Cologne"
 			}
 		}
 	]
