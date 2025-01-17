@@ -12,6 +12,13 @@ Module.register("compliments", {
 			"....-10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
 			"....-11-11": ["Kaja Alaaf!"],
 			"....-12-21": ["Heute ist der kürzeste Tag des Jahres! Ab morgen werden die Tage wieder länger! :)"],
+			"....-03-14":["Happy Birthday Annika! Du bist die Beste!"],
+			"....-03-19":["Happy Birthday Sven! Du bist der Beste!"],
+			"....-06-17":["Happy Birthday Tim! Du bist der Beste!"],
+			"....-10-16":["Happy Birthday Sascha! Du bist der Beste!"],
+			"....-12-18":["Happy Birthday Stefan! Du bist der Beste!"],
+			"....-01-18":["Das ist ein Test"]
+
 		},
 		updateInterval: 30000,
 		remoteFile: null,
