@@ -13,7 +13,7 @@ Module.register("compliments", {
 			"....-06-17":["Happy Birthday Tim! Du bist der Beste!"],
 			"....-10-16":["Happy Birthday Sascha! Du bist der Beste!"],
 			"....-12-18":["Happy Birthday Stefan! Du bist der Beste!"],
-			"....-01-18":["Das ist ein Test"],
+			"2025-01-18":["Das ist ein Test"],
 			anytime: ["Hey!", "Hallo!", "Na, alles klar?", "Was geht?", "Servus!", "Grüß dich!", "Hi, Schnucki!", "Moin Moin!"],
 			morning:  ["Guten Morgen, Schlafmütze!", "Morgenstund hat Gold im Mund... oder so!", "Na, ausgeschlafen?", "Holla die Kochfee, schon wach?", "Guten Morgen, Sonnenschein!", "Bist du auch schon vom Kaffee abhängig?", "Früh aufstehen ist nicht meins, aber für dich mach ich’s!", "Heute wird der Tag gerettet!" ],
 			afternoon: ["Na, schon Kaffeepause?", "Mittagstief? Nicht mit mir!", "Alles im grünen Bereich?", "Wie läuft’s so?", "Hast du schon was Tolles erlebt?", "Was gibt’s Leckeres zu essen?", "Der Nachmittag kann kommen!" ],
