@@ -48,7 +48,7 @@
 }
 
 .clock-hour {
-  width: 10px;
+  width: 7px;
   height: 0;
   position: absolute;
   top: 50%;
@@ -61,7 +61,7 @@
 }
 
 .clock-minute {
-  width: 10px;
+  width: 7px;
   height: 0;
   position: absolute;
   top: 50%;
