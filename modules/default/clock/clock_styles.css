@@ -18,7 +18,7 @@
 .clock-grid-bottom {
   flex-direction: column-reverse;
 }
-.clock. date {
+.clock-date {
   font-size: 35px;
 }
 .clock-circle {
@@ -52,8 +52,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -2px 0 -4px -25%; /* numbers must match negative length & thickness */
-  padding: 2px 0 4px 25%; /* indicator length & thickness */
+  margin: -2px 0 -7px -25%; /* numbers must match negative length & thickness */
+  padding: 2px 0 7px 25%; /* indicator length & thickness */
   background: #f01414;
   transform-origin: 100% 50%;
   border-radius: 3px 0 0 3px;
@@ -83,11 +83,11 @@
   background:  #ffa500;
   transform-origin: 50% 100%;
 }
-.digital. time{
-  font-size: 1px
+.digital.time{
+  font-size: 1px;
 }
-.digital. date{
-  font-size: 1px
+.digital.date{
+  font-size: 1px;
 }
 .week{
   font-size: 35px;
