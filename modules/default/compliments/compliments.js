@@ -5,7 +5,7 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			"23": ["Happy Birthday Leo!"],
-			anytime: [ "Zeit für `n Kaffee",
+			anytime: [ "Zeit für `n Kaffee","sɹǝpuɐ lɐɯ ǝƃuıp ǝıp ǝʇɥɔɐɹʇǝq",
 			"Jeder ist besorgt, aber Emma doesn’t worry",
 			"Bennet Griese hat `ne gute Friese",
 			"Der Deutschrapper - Tupac!",
@@ -32,13 +32,13 @@ Module.register("compliments", {
 			"Benichtsonett",
 			"Live ~ Love ~ Leo",
 			"Genug für heute gesehen, ich setze meine Brille mal ab…"],
-			"12-1": "Melda Christmas",
+			"12-1": ["Melda Christmas"],
 			"01-01": ["Happy new year!"],
 			"10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
 			"11-11": ["Kaja Alaaf!"],
 			"12-21": ["Heute ist der kürzeste Tag des Jahres! Ab morgen werden die Tage wieder länger! :)"],
 		},
-		updateInterval: 30000,
+		updateInterval: 30,
 		remoteFile: null,
 		remoteFileRefreshInterval: 0,
 		fadeSpeed: 4000,
@@ -47,7 +47,7 @@ Module.register("compliments", {
 		afternoonStartTime: 11,
 		afternoonEndTime: 15,
 		random: true,
-		specialDayUnique: false
+		specialDayUnique: true
 	},
 	urlSuffix: "",
 	compliments_new: null,
