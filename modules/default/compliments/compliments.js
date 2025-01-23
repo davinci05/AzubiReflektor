@@ -37,13 +37,14 @@ Module.register("compliments", {
 			"12-21": ["Heute ist der kürzeste Tag des Jahres! Ab morgen werden die Tage wieder länger! :)"],
 			"17": ["Happy Birthday Leo!"],
 			"03-14": ["Happy Birthday Annika! :)"],
-			"03-19": ["Happy Birthday Sven! :)"],
+			"01-23": ["Happy Birthday Sven! :)"], //03-19
+			"01-23": ["Der Apfel lehrt uns zu begreifen, die Besten - das sind die Reifen"], // 03-19
 			"06-17": ["Happy Birthday Tim! :)"],
 			"10-04": ["Happy Birthday Hüseyin! :)"],
 			"10-16": ["Happy Birthday Sascha! :)"],
 			"12-18": ["Happy Birthday Stefan! :)"]
 		},
-		updateInterval: 600000,
+		updateInterval: 30000,
 		remoteFile: null,
 		remoteFileRefreshInterval: 0,
 		fadeSpeed: 2000,
