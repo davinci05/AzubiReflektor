@@ -8,6 +8,7 @@ Module.register("compliments", {
 			"10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
 			"01-23": ["Kaja Alaaf!"],
 			"12-21": ["Heute ist der kürzeste Tag des Jahres! Ab morgen werden die Tage wieder länger! :)"],
+			"MM-21": ["Happy Birthday Leo!"]
 		},
 		updateInterval: 30000,
 		remoteFile: null,
