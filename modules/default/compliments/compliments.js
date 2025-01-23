@@ -43,10 +43,10 @@ Module.register("compliments", {
 			"10-16": ["Happy Birthday Sascha! :)"],
 			"12-18": ["Happy Birthday Stefan! :)"]
 		},
-		updateInterval: 30,
+		updateInterval: 3000,
 		remoteFile: null,
 		remoteFileRefreshInterval: 0,
-		fadeSpeed: 4000,
+		fadeSpeed: 1000,
 		morningStartTime: 3,
 		morningEndTime: 11,
 		afternoonStartTime: 11,
