@@ -69,7 +69,10 @@ let config = {
 		},
 		{
 			module: "compliments",
-			position: "middle_center"
+			position: "middle_center",
+			config: {
+				specialDayUnique: true
+			}
 		},
 		{
 			module: "newsfeed",

@@ -4,7 +4,6 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			"23": ["Happy Birthday Leo!"],
 			anytime: [ "Zeit für `n Kaffee","sɹǝpuɐ lɐɯ ǝƃuıp ǝıp ǝʇɥɔɐɹʇǝq",
 			"Jeder ist besorgt, aber Emma doesn’t worry",
 			"Bennet Griese hat `ne gute Friese",
@@ -34,9 +33,15 @@ Module.register("compliments", {
 			"Genug für heute gesehen, ich setze meine Brille mal ab…"],
 			"12-1": ["Melda Christmas"],
 			"01-01": ["Happy new year!"],
-			"10-04":["Happy Birthday Hueseyin! Du bist der Beste!"],
 			"11-11": ["Kaja Alaaf!"],
 			"12-21": ["Heute ist der kürzeste Tag des Jahres! Ab morgen werden die Tage wieder länger! :)"],
+			"23": ["Happy Birthday Leo!"],
+			"03-14": ["Happy Birthday Annika! :)"],
+			"03-19": ["Happy Birthday Sven! :)"],
+			"06-17": ["Happy Birthday Tim! :)"],
+			"10-04": ["Happy Birthday Hüseyin! :)"],
+			"10-16": ["Happy Birthday Sascha! :)"],
+			"12-18": ["Happy Birthday Stefan! :)"]
 		},
 		updateInterval: 30,
 		remoteFile: null,
