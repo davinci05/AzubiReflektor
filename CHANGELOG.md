@@ -9,3 +9,7 @@
 ### Added
 
 - Transport Modul added
+
+## [1.1.2] - 23.01.2025
+
+- Added startup script for pm2
