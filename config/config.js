@@ -38,7 +38,7 @@ let config = {
             config: {
                 displayType: "analog",
                 analogFace: "face-012",
-                analogSize: "300px",
+                analogSize: "350px",
                 secondsColor: '#FF0090',
                 // timezone: 'Europe/Berlin', // Set to Central European Time
                 lat: 51.002178,
