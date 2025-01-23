@@ -4,7 +4,7 @@ Module.register("clock", {
         displayType: "digital", // options: digital, analog, both
 
         timeFormat: config.timeFormat,
-        timezone: "Europe/Berlin", // Set to Central European Time
+        timezone: null, // Set to Central European Time
 
         displaySeconds: true,
         showPeriod: true,
