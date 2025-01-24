@@ -4,7 +4,17 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: [ "Zeit für `n Kaffee","sɹǝpuɐ lɐɯ ǝƃuıp ǝıp ǝʇɥɔɐɹʇǝq",
+			anytime: [ 
+			"Glühwein mit Schuss in den Kopf bitte",
+			"Mein rechter rechter Platz ist frei, ich wünsch mir ein schnelles Ende herbei",
+			"Ich bin wohl eine Kuh so wie ich ins Gras beißen will",
+			"Kugel in Becher oder Waffel? In den Kopf bitte",
+			"Chili Cheese mir bitte in den Kopf",
+			"Ene Mene Miste, ich wünsch mich in die Kiste",
+			"Tee: Teegliches Leid",
+			"PS: Paranoide Schizophrenie",
+
+			"Zeit für `n Kaffee","sɹǝpuɐ lɐɯ ǝƃuıp ǝıp ǝʇɥɔɐɹʇǝq",
 			"Jeder ist besorgt, aber Emma doesn’t worry",
 			"Bennet Griese hat `ne gute Friese",
 			"Der Deutschrapper - Tupac!",
