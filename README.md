@@ -8,7 +8,8 @@ Dieses Github Repo wird durch einen Skript auf dem Raspi automatisch bei einem S
 
 Dieses liegt lokal auf dem Raspi als auch im [AzubiReflektorSkripts](https://github.com/davinci05/AzubiReflektorScripts) Repository
 
-
+## Magic Mirror Struktur
+![img.png](img.png)
 
 ## Konfiguration
 
@@ -21,5 +22,4 @@ Die Module befinden sich im `modules` Verzeichnis. Jedes Modul hat seinen eigene
 - `modules/default/clock`
 - `modules/default/compliments`
 - `modules/MMM-PublicTransportHafas`
-
 Jedes Modul hat eine eigene `config` Option, die spezifische Einstellungen für das Modul enthält.
