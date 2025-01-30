@@ -4,9 +4,9 @@ Der magische Spiegel, der nicht nur dein Aussehen reflektiert, sondern auch dein
 
 ## Installation
 
-Dieses Github Repo wird durch einen Skript auf dem Raspi automatisch bei einem Start gepullt und deployed (main branch).
+Dieses Github Repository kann durch die lokale [Interface-Website](http://mm2.local:5000) automatisch gepullt werden (im fisi Netz!).
 
-Dieses liegt lokal auf dem Raspi als auch im [AzubiReflektorSkripts](https://github.com/davinci05/AzubiReflektorScripts) Repository
+Das Skript, welches die Website ausführt liegt lokal auf dem Raspi, als auch im [AzubiReflektorSkripts](https://github.com/davinci05/AzubiReflektorScripts) Repository
 
 ## Magic Mirror Struktur
 ![img.png](img.png)
