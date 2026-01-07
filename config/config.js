@@ -59,14 +59,14 @@ let config = {
         },
         {
             module: "calendar",
-            header: "Arbeitszeitbetrug",
+            header: "Urlaub",
             position: "top_left",
             config: {
                 calendars: [
                     {
                         fetchInterval: 7 * 24 * 60 * 60 * 1000,
                         symbol: "calendar-check",
-                        url: "https://ics.calendarlabs.com/56/e261b915/International_Holidays.ics"
+                        url: "https://www.feiertage-deutschland.de/kalender-download/ics/schulferien-nordrhein-westfalen.ics"
                     }
                 ]
             }
